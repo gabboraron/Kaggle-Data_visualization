@@ -2,8 +2,9 @@
 
 # Kaggle - Data Visualization, by [Alexis Cook](https://www.kaggle.com/alexisbcook)
 
-*These are only my notes, my cheat sheet from the course, go to [Kaggle course page](https://www.kaggle.com/learn/data-visualization), to get more. I highly recommned my [biostatistics course notes >>only in Hungarian<<](https://github.com/gabboraron/biostatisztika_es_alkalmazasai), related to this topic.*
+*These are only my notes, my cheat sheet from the course, go to [Kaggle course page](https://www.kaggle.com/learn/data-visualization), to get more. I highly recommned my [biostatistics course notes >>only in Hungarian<<](https://github.com/gabboraron/biostatisztika_es_alkalmazasai), related to this topic. For more info: https://seaborn.pydata.org/index.html*
 
+Fun fact:
 - [Los Angeles open data](https://data.lacity.org/)
 - [fivethirtyeight.com - The Ultimate Halloween Candy Power Ranking ](https://fivethirtyeight.com/videos/the-ultimate-halloween-candy-power-ranking/)
 
@@ -84,10 +85,14 @@ sns.lmplot(x="pricepercent", y="winpercent", hue="chocolate", data=candy_data)
 sns.histplot(iris_data['Petal Length (cm)'])
 ```
 
-```Pythonhttps://storage.googleapis.com/kaggle-media/learn/images/LPWH19I.png
-#KDE plot, you can think of it as a smoothed histogram.
+```Python
+# KDE plot, you can think of it as a smoothed histogram.
 sns.kdeplot(data=iris_data['Petal Length (cm)'], shade=True)
 ```
+
+Note that in addition to the 2D KDE plot in the center,
+- the curve at the top of the figure is a KDE plot for the data on the x-axis (in this case, `iris_data['Petal Length (cm)'])`, and
+- the curve on the right of the figure is a KDE plot for the data on the y-axis (in this case, `iris_data['Sepal Width (cm)'])`.
 
 ```PYthon
 # 2D KDE plot
